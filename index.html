@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KEY'S PATISSERIE - Premium Cakes & Pastry</title>
+
+    <meta name="description"
+        content="KEY'S PATISSERIE menghadirkan kue, dessert, dan pastry premium dengan cita rasa istimewa untuk setiap momen spesial Anda." />
+
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3081/3081967.png">
+
+    <!-- Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #fff8f2;
+            color: #4a2c2a;
+            line-height: 1.6;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 8%;
+            background: #f6d6c1;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav h2 {
+            font-family: 'Playfair Display', serif;
+            color: #7a3e2f;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #7a3e2f;
+            font-size: 14px;
+        }
+
+        .btn-nav {
+            background: #c97b63;
+            color: white;
+            padding: 8px 18px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+
+        header,
+        section {
+            padding: 90px 10%;
+        }
+
+        /* Hero */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,.35), rgba(0,0,0,.35)),
+                url("https://images.unsplash.com/photo-1555507036-ab1f4038808a") center/cover;
+            color: white;
+            text-align: center;
+            padding: 160px 10%;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3em;
+        }
+
+        .hero p {
+            max-width: 650px;
+            margin: 15px auto;
+        }
+
+        .rating {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            background: #f6d6c1;
+            color: #7a3e2f;
+            padding: 12px 26px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Grid & Card */
+        h2 {
+            font-family: 'Playfair Display', serif;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            transition: .3s;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+        }
+
+        .badge {
+            background: #c97b63;
+            color: white;
+            font-size: 12px;
+            padding: 4px 10px;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 8px;
+        }
+
+        /* Gallery */
+        .gallery img {
+            width: 100%;
+            border-radius: 12px;
+            transition: .3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* CTA */
+        .cta {
+            background: #c97b63;
+            color: white;
+        }
+
+        .cta form {
+            background: white;
+            color: #4a2c2a;
+            padding: 25px;
+            border-radius: 12px;
+            max-width: 450px;
+            margin: auto;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            border-radius: 6px;
+            border: none;
+            background: #f7f7f7;
+            margin-bottom: 15px;
+        }
+
+        button {
+            width: 100%;
+            background: #7a3e2f;
+            color: white;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        /* Floating WhatsApp */
+        .wa-float {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 15px;
+            border-radius: 50%;
+            font-size: 22px;
+            z-index: 999;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #f6d6c1;
+            color: #7a3e2f;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <h2>KEY'S PATISSERIE</h2>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#menu">Menu</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#testimonial">Testimoni</a>
+            <a href="#contact">Kontak</a>
+        </div>
+        <a href="#contact" class="btn-nav">Pesan Sekarang</a>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <h1>KEY'S PATISSERIE</h1>
+        <p>Kue & pastry premium buatan rumahan dengan bahan terbaik dan rasa autentik.</p>
+        <div class="rating">⭐⭐⭐⭐⭐ 4.9 (200+ Review)</div>
+        <a href="#menu" class="btn">Lihat Menu</a>
+    </section>
+
+    <!-- Best Seller -->
+    <section>
+        <h2>Best Seller</h2>
+        <div class="grid">
+            <div class="card">
+                <span class="badge">Best Seller</span>
+                <h3>Signature Chocolate Cake</h3>
+                <p>Rp 350.000</p>
+            </div>
+            <div class="card">
+                <span class="badge">Favorit</span>
+                <h3>Red Velvet Cupcake</h3>
+                <p>Rp 180.000</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <section id="menu">
+        <h2>Menu Favorit</h2>
+        <div class="grid">
+            <div class="card">🎂 Signature Cake</div>
+            <div class="card">🧁 Cupcake Premium</div>
+            <div class="card">🥐 Pastry & Croissant</div>
+            <div class="card">🍰 Dessert Box</div>
+        </div>
+    </section>
+
+    <!-- Gallery -->
+    <section id="gallery">
+        <h2>Gallery Produk</h2>
+        <div class="grid gallery">
+            <img src="signature cake.webp">
+            <img src="cupcake.avif">
+            <img src="pastry.jpg">
+            <img src="desert box.jpg">
+        </div>
+    </section>
+
+    <!-- Custom Order -->
+    <section>
+        <h2>Custom Order</h2>
+        <div class="grid">
+            <div class="card">🎂 Birthday Cake</div>
+            <div class="card">💍 Wedding Cake</div>
+            <div class="card">🎁 Hampers & Gift Box</div>
+        </div>
+    </section>
+
+    <!-- Testimoni -->
+    <section id="testimonial">
+        <h2>Apa Kata Pelanggan</h2>
+        <div class="grid">
+            <div class="card">“Kuenya lembut dan manisnya pas.”</div>
+            <div class="card">“Desain cake-nya cantik banget!”</div>
+            <div class="card">“Langganan tiap ada acara.”</div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta" id="contact">
+        <h2>Pesan Sekarang</h2>
+        <p style="text-align: center;">Pre-order H-1 | Open Order 08.00 - 20.00</p><br>
+        <form onsubmit="sendWA(event)">
+            <input type="text" id="name" placeholder="Nama Anda" required>
+            <select id="product" required>
+                <option value="">Pilih Produk</option>
+                <option>Signature Cake</option>
+                <option>Cupcake</option>
+                <option>Pastry</option>
+                <option>Dessert Box</option>
+            </select>
+            <button type="submit">Pesan via WhatsApp</button>
+        </form>
+    </section>
+
+    <!-- Floating WhatsApp -->
+    <a href="#contact" class="wa-float"><i class="fab fa-whatsapp"></i></a>
+
+    <footer>
+        © 2025 KEY'S PATISSERIE — Made with ❤️
+    </footer>
+
+    <script>
+        function sendWA(e) {
+            e.preventDefault();
+            const name = document.getElementById("name").value;
+            const product = document.getElementById("product").value;
+            const wa = "628xxxxxxxxxx";
+
+            const msg = `Halo KEY'S PATISSERIE%0A
+Nama: ${name}%0A
+Pesanan: ${product}`;
+
+            window.open(`https://wa.me/${wa}?text=${msg}`, "_blank");
+        }
+    </script>
+
+</body>
+
+</html>
